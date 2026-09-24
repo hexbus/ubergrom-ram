@@ -49,6 +49,19 @@ def main():
         if 'UGGETB' not in symbols:
             raise ValueError('Cannot read assembler symbol table')
         manifest['backends'][backend] = {'symbols': symbols, 'bytes': (dest/'library.bin').stat().st_size}
+    manifest['benchmarks'] = {}
+    for backend, definitions in [('direct', ['DIRECT']), ('direct-supercart', ['DIRECT','CART']),
+                                 ('supercart', ['SUPERCART']), ('ubergrom', [])]:
+        dest = out/backend
+        dest.mkdir(exist_ok=True)
+        defs = ['-D', *definitions] if definitions else []
+        common = ['-R', '--quiet-opts', '--quiet-unused-syms', '-I', str(ROOT/'src'), str(ROOT/'examples'), *defs]
+        assemble(ROOT/'examples/benchmark.asm', 'benchmark.bin', '-b')
+        assemble(ROOT/'examples/benchmark.asm', 'BENCH', '-i')
+        listing = (dest/'benchmark.bin.lst').read_text()
+        symbols = {name.upper(): int(value, 16) for name,value in
+                   re.findall(r'^\s+([a-z][a-z0-9_]*)\.+\s+>([0-9a-f]{4})\b', listing, re.M)}
+        manifest['benchmarks'][backend] = {'symbols': symbols}
     manifest['sha256'] = {str(p.relative_to(out)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest()
                           for p in sorted(out.rglob('*')) if p.is_file() and p.suffix != '.lst' and p.suffix != '.asm'}
     (out/'manifest.json').write_text(json.dumps(manifest, indent=2)+'\n', encoding='utf8')

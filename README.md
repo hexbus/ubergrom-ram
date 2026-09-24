@@ -8,7 +8,7 @@ This is for new programs and source ports. It does not make an unchanged
 Supercart program run on UberGROM. Instructions, register workspaces and
 ordinary CPU pointers still need real CPU memory.
 
-**Version 0.1.0 is a development release.** Both backends and the included
+**Version 0.2.0 is a development release.** Both backends and the included
 example pass assembled TMS9900 tests. Hardware testing is still needed.
 
 ## What you get
@@ -43,6 +43,12 @@ The [ABI guide](docs/abi.md) defines the registers, errors and calling rules.
 The [mapping guide](docs/mapping.md) explains where the buffer lives and how
 to configure UberGROM without disturbing the file services.
 
+For side-by-side native CPU and ABI examples, see [the comparisons](docs/comparisons.md).
+The [speed tests](docs/benchmarks.md) show byte/word, block-copy and fill
+timings on the TI screen. Builds cover direct 32K RAM, direct Supercart RAM,
+the Supercart ABI, and the UberGROM ABI. Actual hardware timings are still
+to be measured; emulator results are labeled separately.
+
 ## Build and test
 
 You need Python 3.10 or later, Git and Node.js 20 or later. From this directory:
@@ -66,9 +72,14 @@ it as a TI PROGRAM file using your normal disk-image or transfer tool.
 The example leaves `STATUS` set to `>600D` on success and loops at `DONE`;
 the listing gives those addresses. It does not draw a screen.
 
+The four speed-test folders also contain `BENCH` and `benchmark.bin`.
+Unlike the small example, BENCH draws its own results screen. Read the
+[benchmark directions](docs/benchmarks.md) before running it.
+
 Builds require a new output directory. To build again without replacing the
 first output, use `python tools/build.py --out output/second-build`, then
-`node tests/verify.cjs output/second-build`.
+`node tests/verify.cjs output/second-build` and
+`node tests/benchmark.cjs output/second-build`.
 
 For an existing xdt99 checkout, use `--xdt99 PATH` or set `XDT99`.
 Set `JS99ER_CHECKOUT` to use an existing js99er checkout for the tests.

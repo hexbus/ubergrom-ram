@@ -21,6 +21,10 @@ def main():
     manifest = json.loads((build/'manifest.json').read_text())
     if report.get('passed') is not True:
         parser.error('Build has not passed verification')
+    if manifest.get('benchmarks'):
+        benchmark = json.loads((build/'benchmark-verification.json').read_text())
+        if benchmark.get('passed') is not True:
+            parser.error('Benchmarks have not passed verification')
     for name, digest in manifest['sha256'].items():
         if hashlib.sha256((build/name).read_bytes()).hexdigest() != digest:
             parser.error('Build file changed: '+name)
@@ -38,6 +42,8 @@ def main():
         files['build/'+name] = build/name
     for name in ['manifest.json','verification.json']:
         files['build/'+name] = build/name
+    if manifest.get('benchmarks'):
+        files['build/benchmark-verification.json'] = build/'benchmark-verification.json'
     for p in build.rglob('*.lst'):
         files['build/'+p.relative_to(build).as_posix()] = p
     checksums = ''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+name+'\n'
