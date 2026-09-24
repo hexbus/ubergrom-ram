@@ -1,0 +1,4256 @@
+{
+  "date": "2026-09-24",
+  "updated_library_hardware_tested": true,
+  "hardware_comparison": {
+    "program": "RAMPROBE2 (original library)",
+    "expansions": [
+      "PicoPEB",
+      "Corcomp 32K"
+    ],
+    "ABI-PAD": "Both reads matched all 8192 bytes on both setups; zero differences between reads.",
+    "ABI-EXT/PACED/ADDR": "Failed on both setups.",
+    "conclusion": "Scratchpad workspace is the successful software path; exact electrical/timing cause unconfirmed."
+  },
+  "new_library_sha256": "f0005fd0ff8794b2f55866ec178f68fb7c59eb2318ba71fce6a6c26133769d45",
+  "new_library_bytes": 594,
+  "unit_tests": {
+    "passed": true,
+    "hardware_tested": false,
+    "cases": 326,
+    "details": [
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 48896
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 48896
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 43008
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 43008
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33760
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33760
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33538
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33538
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33552
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33552
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33520
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33520
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 26367,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 26367,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 26368,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 26368,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 26365,
+        "length": 7,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 26365,
+        "length": 7,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 3,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 3,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 32766,
+        "length": 2,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 32766,
+        "length": 2,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETB",
+        "address": 24575,
+        "length": 0,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTB",
+        "address": 32768,
+        "length": 0,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGGETW",
+        "address": 32767,
+        "length": 0,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGPUTW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 32767,
+        "length": 2,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 8193,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 32769,
+        "length": 0,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 65535,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 2,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 2,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "ubergrom",
+        "name": "shipped-example",
+        "error": 0
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 48896
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 48896
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 48896
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 43008
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 43008
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 43008
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33760
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33760
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33760
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33538
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33538
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33538
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33552
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33552
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33552
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 26366,
+        "length": 4,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33520
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33520
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33520
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 26367,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 26367,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 26368,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 26368,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 32767,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 8192,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 26365,
+        "length": 7,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 26365,
+        "length": 7,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 3,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 3,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 32766,
+        "length": 2,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 32766,
+        "length": 2,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 32768,
+        "length": 0,
+        "error": 0,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETB",
+        "address": 24575,
+        "length": 0,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTB",
+        "address": 32768,
+        "length": 0,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGGETW",
+        "address": 32767,
+        "length": 0,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGPUTW",
+        "address": 24577,
+        "length": 0,
+        "error": 2,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 32767,
+        "length": 2,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 8193,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 32769,
+        "length": 0,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGFILL",
+        "address": 24576,
+        "length": 65535,
+        "error": 1,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 2,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 2,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 1,
+        "error": 3,
+        "workspace": 33536
+      },
+      {
+        "backend": "supercart",
+        "name": "shipped-example",
+        "error": 0
+      }
+    ]
+  },
+  "benchmark_tests": {
+    "passed": true,
+    "hardware_tested": false,
+    "timing_model": "CPU instruction cycles only; excludes bus/GROM/AVR wait states. NOT hardware speed results.",
+    "reports": [
+      {
+        "backend": "direct",
+        "overflow": false,
+        "badRam": false,
+        "status": 24589,
+        "samples": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "ticks": [
+          512,
+          5376,
+          4352,
+          3584,
+          4352,
+          48128,
+          48128,
+          41728
+        ],
+        "kernel_instruction_cycles": [
+          12800,
+          317440,
+          251904,
+          202752,
+          251904,
+          3051520,
+          3051520,
+          2654208
+        ]
+      },
+      {
+        "backend": "direct-supercart",
+        "overflow": false,
+        "badRam": false,
+        "status": 24589,
+        "samples": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "ticks": [
+          512,
+          5376,
+          4352,
+          3584,
+          4352,
+          48128,
+          48128,
+          41728
+        ],
+        "kernel_instruction_cycles": [
+          12800,
+          317440,
+          251904,
+          202752,
+          251904,
+          3051520,
+          3051520,
+          2654208
+        ]
+      },
+      {
+        "backend": "supercart",
+        "overflow": false,
+        "badRam": false,
+        "status": 24589,
+        "samples": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "ticks": [
+          512,
+          50176,
+          51712,
+          60416,
+          63232,
+          91904,
+          122624,
+          117760
+        ],
+        "kernel_instruction_cycles": [
+          12800,
+          3192832,
+          3291136,
+          3848192,
+          4020224,
+          5862912,
+          7828992,
+          7519744
+        ]
+      },
+      {
+        "backend": "ubergrom",
+        "overflow": false,
+        "badRam": false,
+        "status": 24589,
+        "samples": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "ticks": [
+          512,
+          191488,
+          193024,
+          203264,
+          206080,
+          127488,
+          158208,
+          153344
+        ],
+        "kernel_instruction_cycles": [
+          12800,
+          12228608,
+          12326912,
+          12990464,
+          13162496,
+          8140288,
+          10106368,
+          9797120
+        ]
+      },
+      {
+        "backend": "ubergrom",
+        "overflow": true,
+        "badRam": false,
+        "status": 65535,
+        "samples": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ticks": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kernel_instruction_cycles": [
+          50,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "backend": "ubergrom",
+        "overflow": false,
+        "badRam": true,
+        "status": 65534,
+        "samples": [
+          256,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ticks": [
+          512,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "kernel_instruction_cycles": [
+          12800,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "hardware_kit_model_tests": {
+    "passed": true,
+    "hardware_tested": false,
+    "tested_images": {
+      "ea/ea-atmega1284p-flash.bin": "3ae0f28160da454ac312a844df8aa6da56282c73696858296c6b77301db46f39",
+      "ea/ea-rom512k.bin": "ec135f104cc5e621e66569a2fe0d57cc4cdbbfcb5f996aeba731b8a1f4a81ed1",
+      "ea/ea-atmega1284p-eeprom.bin": "72fbb027f2df35bf9026c9d9fc8bae2561f4162d7a099de45ff99cbc9609f40b"
+    },
+    "evidence": "Actual E/A option 5 launches with CPU/console GPL and modeled ATmega hardware. Timer values are not hardware measurements.",
+    "results": [
+      {
+        "name": "RAMTEST",
+        "badRam": false,
+        "existing": false,
+        "passed": true,
+        "libraryPortAccesses": 82000,
+        "eeprom_writes": 317,
+        "calls": [
+          {
+            "op": 5,
+            "name": "ROM1.RAMTEST"
+          },
+          {
+            "op": 5,
+            "name": "UBE1.UGRAMT1"
+          },
+          {
+            "op": 5,
+            "name": "ROM1.RAMDATA"
+          },
+          {
+            "op": 6,
+            "name": "UBE1.UGRAMT1"
+          },
+          {
+            "op": 5,
+            "name": "UBE1.UGRAMT1"
+          },
+          {
+            "op": 5,
+            "name": "UBE1.UGRAMT1"
+          },
+          {
+            "op": 7,
+            "name": "UBE1.UGRAMT1"
+          },
+          {
+            "op": 5,
+            "name": "UBE1.UGRAMT1"
+          }
+        ],
+        "screen": "                                        \nUBERGROM RAM AND DSR TEST               \n                                        \n                                        \nRAM AND FILE CHECK: PASS                \n                                        \nSTAGE: 9                                \n                                        \nPHOTOGRAPH SCREEN. RESET TO LEAVE.      \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        "
+      },
+      {
+        "name": "RAMTEST",
+        "badRam": true,
+        "existing": false,
+        "passed": true,
+        "libraryPortAccesses": 16400,
+        "eeprom_writes": 0,
+        "calls": [
+          {
+            "op": 5,
+            "name": "ROM1.RAMTEST"
+          },
+          {
+            "op": 5,
+            "name": "UBE1.UGRAMT1"
+          }
+        ],
+        "screen": "                                        \nUBERGROM RAM AND DSR TEST               \n                                        \n                                        \nRAM OR FILE CHECK: FAILED               \n                                        \nSTAGE: 2                                \n                                        \nPHOTOGRAPH SCREEN. RESET TO LEAVE.      \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        "
+      },
+      {
+        "name": "RAMTEST",
+        "badRam": false,
+        "existing": true,
+        "passed": true,
+        "libraryPortAccesses": 0,
+        "eeprom_writes": 0,
+        "calls": [
+          {
+            "op": 5,
+            "name": "ROM1.RAMTEST"
+          },
+          {
+            "op": 5,
+            "name": "UBE1.UGRAMT1"
+          }
+        ],
+        "screen": "                                        \nUBERGROM RAM AND DSR TEST               \n                                        \n                                        \nSTOP: CHECK UBE1.UGRAMT1 FIRST          \n                                        \nSTAGE: 1                                \n                                        \nPHOTOGRAPH SCREEN. RESET TO LEAVE.      \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        "
+      },
+      {
+        "name": "UGBENCH",
+        "badRam": false,
+        "existing": false,
+        "passed": true,
+        "libraryPortAccesses": 336008,
+        "eeprom_writes": 0,
+        "calls": [
+          {
+            "op": 5,
+            "name": "ROM1.UGBENCH"
+          }
+        ],
+        "screen": "                                        \nUBERGROM RAM SPEED TEST                 \n                                        \nUBERGROM ABI                            \n                                        \nOPERATION                TOTAL TICKS    \n                                        \nEMPTY SAMPLE                    782     \nBYTE READ   4096 OPS         336867     \nBYTE WRITE  4096 OPS         342334     \nWORD READ   4096 OPS         357954     \nWORD WRITE  4096 OPS         361859     \nREAD 256    65536 BYTES      218155     \nWRITE 256   65536 BYTES      268920     \nFILL 256    65536 BYTES      261110     \n                                        \n                                        \n                                        \nDATA CHECK: PASS                        \n                                        \n                                        \n46875 TICKS = 1 SECOND AT 3MHZ          \nRESET CONSOLE TO LEAVE                  \n                                        "
+      },
+      {
+        "name": "CPUBENCH",
+        "badRam": false,
+        "existing": false,
+        "passed": true,
+        "libraryPortAccesses": 0,
+        "eeprom_writes": 0,
+        "calls": [
+          {
+            "op": 5,
+            "name": "ROM1.CPUBENCH"
+          }
+        ],
+        "screen": "                                        \nUBERGROM RAM SPEED TEST                 \n                                        \nDIRECT 32K CPU RAM                      \n                                        \nOPERATION                TOTAL TICKS    \n                                        \nEMPTY SAMPLE                    782     \nBYTE READ   4096 OPS           7038     \nBYTE WRITE  4096 OPS           7820     \nWORD READ   4096 OPS           7820     \nWORD WRITE  4096 OPS           7038     \nREAD 256    65536 BYTES       98532     \nWRITE 256   65536 BYTES       94622     \nFILL 256    65536 BYTES       83674     \n                                        \n                                        \n                                        \nDATA CHECK: PASS                        \n                                        \n                                        \n46875 TICKS = 1 SECOND AT 3MHZ          \nRESET CONSOLE TO LEAVE                  \n                                        "
+      }
+    ]
+  },
+  "coexistence_model_tests": {
+    "passed": true,
+    "hardware_tested": false,
+    "evidence": "TMS9900 emulator executes the CPU library, console GPL and unchanged development DSR; ATmega RAM/EEPROM are modeled.",
+    "source_components": {
+      "service.bin": {
+        "bytes": 8026,
+        "sha256": "540c81caca85cbd50263c811bc45a288dd9a4420ec54443036f154b34f6aa1a1"
+      },
+      "reader.bin": {
+        "bytes": 1697,
+        "sha256": "f08f6a71213bd5282c3aff5c1c375502fe88d945e56173bb8ee214744fa7fa71"
+      }
+    },
+    "library_sha256": "f0005fd0ff8794b2f55866ec178f68fb7c59eb2318ba71fce6a6c26133769d45",
+    "dsr_operations": 59,
+    "library_calls": 111,
+    "highest_dsr_ram_write": 5973,
+    "highest_library_ram_write": 14591,
+    "eeprom_writes": 1004,
+    "page_edge_reads": 80,
+    "emulator_revision": "66c2e587eeec489ce2dcfa537f9c71e734810f87",
+    "hardware_model_sha256": "ed0fb590ba7b5f99590b702c9b75a074c615f0ebb94519b1876f0c2c933625e6",
+    "protected_configuration_unchanged": true,
+    "spare_bytes_unchanged": 768,
+    "sentinel_preserved": true,
+    "cases": [
+      {
+        "kind": "library",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.KEEP",
+        "op": 6,
+        "flags": 0,
+        "error": 0,
+        "frames": 161
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.PATTERN",
+        "op": 5,
+        "flags": 0,
+        "error": 0,
+        "frames": 40
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 0,
+        "flags": 4,
+        "error": 0,
+        "frames": 8
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 0,
+        "flags": 18,
+        "error": 0,
+        "frames": 73
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 2,
+        "flags": 4,
+        "error": 0,
+        "frames": 8
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGWRIT",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 3,
+        "flags": 18,
+        "error": 0,
+        "frames": 10
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 2,
+        "flags": 4,
+        "error": 0,
+        "frames": 8
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGWRIT",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 3,
+        "flags": 18,
+        "error": 0,
+        "frames": 10
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 2,
+        "flags": 4,
+        "error": 0,
+        "frames": 8
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGWRIT",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 3,
+        "flags": 18,
+        "error": 0,
+        "frames": 10
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 2,
+        "flags": 4,
+        "error": 0,
+        "frames": 8
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGWRIT",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 3,
+        "flags": 18,
+        "error": 0,
+        "frames": 10
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 1,
+        "flags": 18,
+        "error": 0,
+        "frames": 642
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 1,
+        "flags": 4,
+        "error": 0,
+        "frames": 6
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 0,
+        "flags": 20,
+        "error": 0,
+        "frames": 126
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 2,
+        "flags": 20,
+        "error": 0,
+        "frames": 9
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 2,
+        "flags": 20,
+        "error": 0,
+        "frames": 9
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 2,
+        "flags": 20,
+        "error": 0,
+        "frames": 9
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 2,
+        "flags": 20,
+        "error": 0,
+        "frames": 9
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 2,
+        "flags": 20,
+        "error": 5,
+        "frames": 7
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 1,
+        "flags": 20,
+        "error": 0,
+        "frames": 7
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 26368,
+        "length": 256,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.PROGRAM",
+        "op": 6,
+        "flags": 0,
+        "error": 0,
+        "frames": 569
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.PROGRAM",
+        "op": 5,
+        "flags": 0,
+        "error": 0,
+        "frames": 155
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.",
+        "op": 11,
+        "flags": 0,
+        "error": 0,
+        "frames": 172
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.KEEP",
+        "op": 5,
+        "flags": 0,
+        "error": 0,
+        "frames": 146
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 7,
+        "flags": 0,
+        "error": 0,
+        "frames": 182
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.PROGRAM",
+        "op": 7,
+        "flags": 0,
+        "error": 0,
+        "frames": 145
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.",
+        "op": 11,
+        "flags": 0,
+        "error": 0,
+        "frames": 96
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.MISSING",
+        "op": 5,
+        "flags": 0,
+        "error": 7,
+        "frames": 4
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGPUTW",
+        "address": 32767,
+        "length": 0,
+        "error": 1
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGWRIT",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.PATTERN",
+        "op": 5,
+        "flags": 0,
+        "error": 0,
+        "frames": 38
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 0,
+        "flags": 4,
+        "error": 0,
+        "frames": 8
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 0,
+        "flags": 18,
+        "error": 0,
+        "frames": 73
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 2,
+        "flags": 4,
+        "error": 0,
+        "frames": 8
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGWRIT",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 3,
+        "flags": 18,
+        "error": 0,
+        "frames": 10
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 2,
+        "flags": 4,
+        "error": 0,
+        "frames": 8
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGWRIT",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 3,
+        "flags": 18,
+        "error": 0,
+        "frames": 10
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 2,
+        "flags": 4,
+        "error": 0,
+        "frames": 8
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGWRIT",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 3,
+        "flags": 18,
+        "error": 0,
+        "frames": 10
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 2,
+        "flags": 4,
+        "error": 0,
+        "frames": 8
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGWRIT",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 26352,
+        "length": 80,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 3,
+        "flags": 18,
+        "error": 0,
+        "frames": 10
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 1,
+        "flags": 18,
+        "error": 0,
+        "frames": 614
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.RECORDS",
+        "op": 1,
+        "flags": 4,
+        "error": 0,
+        "frames": 6
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 0,
+        "flags": 20,
+        "error": 0,
+        "frames": 126
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 2,
+        "flags": 20,
+        "error": 0,
+        "frames": 9
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 2,
+        "flags": 20,
+        "error": 0,
+        "frames": 9
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 2,
+        "flags": 20,
+        "error": 0,
+        "frames": 9
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGPUTW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGGETW",
+        "address": 32766,
+        "length": 0,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 2,
+        "flags": 20,
+        "error": 0,
+        "frames": 9
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 2,
+        "flags": 20,
+        "error": 5,
+        "frames": 7
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 1,
+        "flags": 20,
+        "error": 0,
+        "frames": 7
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 26368,
+        "length": 256,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.PROGRAM",
+        "op": 6,
+        "flags": 0,
+        "error": 0,
+        "frames": 562
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.PROGRAM",
+        "op": 5,
+        "flags": 0,
+        "error": 0,
+        "frames": 155
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.",
+        "op": 11,
+        "flags": 0,
+        "error": 0,
+        "frames": 172
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.KEEP",
+        "op": 5,
+        "flags": 0,
+        "error": 0,
+        "frames": 146
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.TEMP",
+        "op": 7,
+        "flags": 0,
+        "error": 0,
+        "frames": 182
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.PROGRAM",
+        "op": 7,
+        "flags": 0,
+        "error": 0,
+        "frames": 145
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.",
+        "op": 11,
+        "flags": 0,
+        "error": 0,
+        "frames": 96
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "ROM1.MISSING",
+        "op": 5,
+        "flags": 0,
+        "error": 7,
+        "frames": 4
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "library",
+        "name": "UGPUTW",
+        "address": 32767,
+        "length": 0,
+        "error": 1
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.KEEP",
+        "op": 5,
+        "flags": 0,
+        "error": 0,
+        "frames": 75
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      },
+      {
+        "kind": "dsr",
+        "name": "UBE1.",
+        "op": 11,
+        "flags": 0,
+        "error": 0,
+        "frames": 96
+      },
+      {
+        "kind": "library",
+        "name": "UGREAD",
+        "address": 24576,
+        "length": 8192,
+        "error": 0
+      }
+    ]
+  },
+  "updated_library_hardware_scope": "UGBENCH passed on Corcomp 32K; delivered TEST 2 also passed the RAM/PROGRAM-file sequence. E/A record-file loaders remain unqualified.",
+  "hardware_followup": "ram-adapter-hardware-feedback.json",
+  "later_resolution": {
+    "date": "2026-09-24",
+    "record": "hardware-20260924.json",
+    "note": "Historical unresolved statements above describe the earlier builds. Later E/A record loads and small saves/reloads passed; capacity-error recovery improved. Full scope and limits are in the linked result."
+  }
+}

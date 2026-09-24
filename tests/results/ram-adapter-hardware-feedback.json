@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-24",
+  "source": "User hardware report and two photographs",
+  "tested_rom_sha256": "ec135f104cc5e621e66569a2fe0d57cc4cdbbfcb5f996aeba731b8a1f4a81ed1",
+  "expansion": "Corcomp 32K sidecar (user identified)",
+  "UGBENCH": "DATA CHECK: PASS; all timing rows populated",
+  "RAMTEST": "User reports lockup and sustained sound; photograph shows RUNNING - PLEASE WAIT",
+  "stage": "Unknown. Earlier recollection of stage 2 is unconfirmed; this build has no live stage display.",
+  "photo_attachment": "C43C1B3A-78DB-4EBC-9A9D-9DF24A440A94",
+  "inference": "File-call bridge still transfers private GROM RAM with an expansion-RAM workspace; suspect but not a confirmed cause.",
+  "next_revision": "CPU RAM backup in a RAMTEST-only bridge, live operation markers and explicit sound mute",
+  "next_revision_hardware_tested": true,
+  "followup": {
+    "reported_failures": [
+      "RAMTEST hangs with random sustained sound",
+      "DIS/FIX and DIS/VAR loads in E/A editor hang",
+      "ROM1.TOMB via E/A option 3 hangs with blank blue screen and random sustained sound"
+    ],
+    "RAMTEST_photo_title": "UBERGROM RAM AND DSR TEST",
+    "RAMTEST_photo_message": "RUNNING - PLEASE WAIT",
+    "interpretation": "The visible title matches the user-confirmed Workspace Fix build. Startup occurred, but this earlier diagnostic has no live stage. There is no established image mismatch and no readback is needed for that question.",
+    "adapter_retest_result": "Subsequent identified TEST 2 photo shows PASS at stage 9; see TEST2_hardware_result.",
+    "photos": [
+      "DE6F1B5B-751C-42D3-B759-727346BCA8CD",
+      "0FC63387-ED37-47AA-893E-5EAE85518279"
+    ],
+    "local_followup": "Undelivered TEST 3 additionally uses scratchpad registers for adapter GROM address transactions; behavioral-model tests passed. Not claimed as a hardware fix.",
+    "confirmed_programmed_folder": "E:/iCloudDrive/Desktop/Adventure UberGROM/RAM Workspace Fix - 2026-09-24"
+  },
+  "TEST2_hardware_result": {
+    "date": "2026-09-24",
+    "photo_attachment": "650E0D22-7CE4-4C5F-8CDD-BC970F107AE8",
+    "screen_title": "UBERGROM RAM AND DSR TEST 2",
+    "result": "RAM AND FILE CHECK: PASS",
+    "stage": 9,
+    "footer": "TEST FINISHED - RESET TO LEAVE",
+    "rom_sha256": "31b4afc619147c92316f7f1f135cc7c1bf44fa0f97cb3c72fd10c5be2d17ba4a",
+    "scope": "8K RAM patterns interleaved with ROM1 PROGRAM load and UBE1 PROGRAM save/reload/delete/missing-file checks",
+    "remaining": "E/A DIS/FIX and DIS/VAR loader lockups unresolved; TEST 3 local experiments not hardware qualified",
+    "source_snapshot": "E:/iCloudDrive/Desktop/Adventure UberGROM/RAM File Adapter Retest - 2026-09-24/source"
+  },
+  "later_resolution": {
+    "date": "2026-09-24",
+    "record": "hardware-20260924.json",
+    "note": "Historical unresolved statements above describe the earlier builds. Later E/A record loads and small saves/reloads passed; capacity-error recovery improved. Full scope and limits are in the linked result."
+  }
+}

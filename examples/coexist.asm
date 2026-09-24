@@ -1,6 +1,6 @@
 * Copyright (c) 2026 hexbus. SPDX-License-Identifier: Apache-2.0
 * Hardware qualification program for the E/A/CF02 development cartridge.
-* Built by tools/build-hardware-kit.py, including that profile's GPL bridge.
+* Built by tools/build-hardware-kit.py with a CPU-backup GPL test bridge.
 * Uses CPU >A000..>BFFF for code/workspaces; >C000..>FFFF for comparisons.
 * Creates only UBE1.UGRAMT1, refusing to proceed if it already exists.
        DEF START
@@ -11,6 +11,7 @@ PABVDP EQU >3000
 DATAWD EQU >1000
 START  LIMI 0
        LWPI WORK
+       BL @SILENT
        BL @VIDEO
        LI R0,40
        LI R1,TITLE
@@ -88,6 +89,7 @@ FAILED MOV R3,@ERRVAL
        MOV R0,@STATUS
        LI R1,FAIL
 STOP   MOV R1,@ENDMSG
+       BL @SILENT
        BL @VIDEO
        LI R0,40
        LI R1,TITLE
@@ -110,6 +112,8 @@ STOP   MOV R1,@ENDMSG
 DONE   JMP DONE
 
 PATTERN MOV R11,@PATLNK
+       LI R1,WRMSG
+       BL @TRACE
        LI R5,>C000
        LI R6,4096
 PATLP  MOV R7,*R5+
@@ -125,6 +129,8 @@ PATLP  MOV R7,*R5+
        MOV @PATLNK,R11
        B *R11
 COMPARE MOV R11,@CMPLNK
+       LI R1,RDMSG
+       BL @TRACE
        LI R0,>6000
        LI R1,>E000
        LI R2,8192
@@ -156,6 +162,14 @@ FILEOK MOV R11,@OKLINK
        MOV @OKLINK,R11
        B *R11
 FILEIO MOV R11,@IOLINK
+       LI R1,LOADTX
+       CI R0,6
+       JNE NOTSAV
+       LI R1,SAVETX
+NOTSAV CI R0,7
+       JNE SHOWIO
+       LI R1,DELTXT
+SHOWIO BL @TRACE
        SWPB R0
        MOVB R0,@PAB
        CLR R0
@@ -174,6 +188,8 @@ PABLP  MOVB *R5+,@>8C00
        BL @RDADDR
        MOVB @>8800,R3
        SRL R3,13
+       LI R1,RETTXT
+       BL @TRACE
        MOV @IOLINK,R11
        B *R11
 LOADCK MOV R11,@LDLINK
@@ -212,9 +228,40 @@ RDADDR MOV R0,R4
        MOVB R4,@>8C02
        B *R11
 
+* Show the operation before entering it. Preserve the operation's arguments;
+* PRINT/VADDR use only R0, R1, R4, R11. TRACE does not touch GROM or EEPROM.
+TRACE  MOV R11,@TRLINK
+       MOV R0,@TRSAVE
+       MOV R1,@TRSAVE+2
+       MOV R4,@TRSAVE+4
+       LI R0,200
+       LI R1,STGTXT
+       BL @PRINT
+       LI R0,207
+       BL @VADDR
+       MOV @STAGE,R4
+       AI R4,>0030
+       SWPB R4
+       MOVB R4,@>8C00
+       LI R0,240
+       MOV @TRSAVE+2,R1
+       BL @PRINT
+       MOV @TRSAVE,R0
+       MOV @TRSAVE+2,R1
+       MOV @TRSAVE+4,R4
+       MOV @TRLINK,R11
+       B *R11
+* Interrupts stay disabled while testing. Explicitly silence all channels
+* rather than depending on the console sound interrupt to end a tone.
+SILENT MOVB @MUTE,@>8400
+       MOVB @MUTE+1,@>8400
+       MOVB @MUTE+2,@>8400
+       MOVB @MUTE+3,@>8400
+       B *R11
+
 * Screen routines use an original font; file PAB/data use separate VDP areas.
        COPY 'test-video.asm'
-TITLE  TEXT 'UBERGROM RAM AND DSR TEST'
+TITLE  TEXT 'UBERGROM RAM AND DSR TEST 2'
        BYTE 0
 RUNMSG TEXT 'RUNNING - PLEASE WAIT'
        BYTE 0
@@ -226,8 +273,21 @@ EXISTS TEXT 'STOP: CHECK UBE1.UGRAMT1 FIRST'
        BYTE 0
 STGTXT TEXT 'STAGE:'
        BYTE 0
-FOOT   TEXT 'PHOTOGRAPH SCREEN. RESET TO LEAVE.'
+FOOT   TEXT 'TEST FINISHED - RESET TO LEAVE'
        BYTE 0
+WRMSG  TEXT 'WRITING 8K RAM                  '
+       BYTE 0
+RDMSG  TEXT 'READING AND CHECKING 8K RAM     '
+       BYTE 0
+LOADTX TEXT 'FILE CALL: LOAD                '
+       BYTE 0
+SAVETX TEXT 'FILE CALL: SAVE                '
+       BYTE 0
+DELTXT TEXT 'FILE CALL: DELETE              '
+       BYTE 0
+RETTXT TEXT 'FILE CALL RETURNED             '
+       BYTE 0
+MUTE   BYTE >9F,>BF,>DF,>FF
 RAMNAME BYTE 12
        TEXT 'UBE1.UGRAMT1'
        BYTE 0,0
@@ -252,6 +312,8 @@ IOLINK BSS 2
 LDLINK BSS 2
 PYLINK BSS 2
 ENDMSG BSS 2
+TRLINK BSS 2
+TRSAVE BSS 6
        COPY 'font.asm'
        COPY 'ugram.asm'
 CODEEND EQU $

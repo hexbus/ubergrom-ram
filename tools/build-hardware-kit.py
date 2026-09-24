@@ -38,6 +38,11 @@ def main():
         if not json.loads((source/name).read_text())['passed']:
             p.error('Module tests did not pass')
     lm = json.loads((lib/'manifest.json').read_text())
+    # RAMTEST assembles the current library; benchmarks come from lib. Reject
+    # mixed revisions instead of calling the combination a verified build.
+    for name in ('src/ugram.asm','examples/benchmark.asm','examples/font.asm'):
+        if lm.get('source_sha256',{}).get(name) != sha((ROOT/name).read_bytes()):
+            p.error('Rebuild and verify the library from current sources: '+name)
     for name,digest in lm['sha256'].items():
         if sha((lib/name).read_bytes()) != digest:
             p.error('Changed library input: '+name)
@@ -56,7 +61,8 @@ def main():
     test.mkdir()
     ea=out/'ea'
     manifest=json.loads((ea/'SOURCE-MAP.json').read_text())
-    subprocess.run([sys.executable,str(xas),str(repo/'sources/cpu/cart-dsrlink.asm'),
+    bridge_source=ROOT/'examples/test-dsrlink.asm'
+    subprocess.run([sys.executable,str(xas),str(bridge_source),
                     '-R','-b','-D','ENTRYBASE=>B800','WORKSPACE=>BE00',
                     f'GPLCALL=>{manifest["tail_labels"]["CPUCALL"]:04X}',
                     '-o',str(test/'bridge.bin')],check=True)
@@ -69,7 +75,7 @@ def main():
     listing=(test/'ramtest.bin.lst').read_text()
     symbols={name.upper():int(value,16) for name,value in
              re.findall(r'^\s+([a-z][a-z0-9_]*)\.+\s+>([0-9a-f]{4})\b',listing,re.M)}
-    subprocess.run([sys.executable,str(xas),str(repo/'sources/cpu/cart-dsrlink.asm'),
+    subprocess.run([sys.executable,str(xas),str(bridge_source),
                     '-R','-b','-D',f'ENTRYBASE=>{symbols["BRIDGE"]:04X}','WORKSPACE=>BE00',
                     f'GPLCALL=>{manifest["tail_labels"]["CPUCALL"]:04X}',
                     '-o',str(test/'bridge.bin')],check=True)
@@ -112,9 +118,12 @@ def main():
     # only after the separate emulator verification succeeds.
     (out/'index.json').rename(out/'original-module-index.json')
     plan={'hardware_tested':False,'status':'Awaiting kit emulator check',
+          'diagnostic_revision':'TEST 2',
           'ea_added_files':[f.name for f in added],
           'ea_flash_unchanged':True,'ea_base13_added':True,
           'ramtest_symbols':symbols,'library_sha256':lm['sha256']['ubergrom/library.bin'],
+          'ramtest_bridge':'CPU RAM scratchpad backup; no private GROM RAM transfers',
+          'ramtest_bridge_source_sha256':sha(bridge_source.read_bytes()),
           'original_rom_sha256':sha(original),'test_rom_sha256':sha(rom)}
     (out/'kit-build.json').write_text(json.dumps(plan,indent=2)+'\n')
     (ea/'SOURCE-MAP.json').rename(ea/'ORIGINAL-SOURCE-MAP.json')

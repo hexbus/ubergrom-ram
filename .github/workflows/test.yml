@@ -18,6 +18,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: python tools/build.py
       - run: npm test
+      - run: python -m unittest discover -s tests -p test_build_guards.py
       - uses: actions/upload-artifact@v4
         with:
           name: ubergrom-ram-development

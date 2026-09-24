@@ -1,0 +1,74 @@
+{
+  "date": "2026-09-24",
+  "source": "hexbus hardware reports and photographs in this conversation",
+  "scope": "User-observed results; not independent lab qualification",
+  "comparison": {
+    "setups": [
+      "PicoPEB",
+      "Corcomp 32K sidecar"
+    ],
+    "ABI-PAD": "Zero errors in both reads on both setups",
+    "ABI-EXT_PACED_ADDR": "Failed on both setups",
+    "electrical_cause": "Unconfirmed"
+  },
+  "current_library_source_sha256": "9d63078fd43186342d4f42cd6b7b61e357f36ccb5e56467ff177cfa76cd54384",
+  "current_library_binary_sha256": "f0005fd0ff8794b2f55866ec178f68fb7c59eb2318ba71fce6a6c26133769d45",
+  "TEST2": {
+    "result": "PASS",
+    "stage": 9,
+    "scope": "RAM patterns plus PROGRAM load/save/reload/delete",
+    "photo_attachment": "650E0D22-7CE4-4C5F-8CDD-BC970F107AE8",
+    "diagnostic_sha256": "1f3b13c27dfc1eb5a8a46031961a9211331644eccc632e6198b62b950b2397be",
+    "original_rom_sha256": "31b4afc619147c92316f7f1f135cc7c1bf44fa0f97cb3c72fd10c5be2d17ba4a"
+  },
+  "UGBENCH": {
+    "result": "DATA CHECK: PASS",
+    "setup": "Corcomp 32K sidecar",
+    "photo_attachment": "9F1B6D6E-DD19-4E74-B3B4-87723CA1CD15",
+    "ticks": [
+      512,
+      349440,
+      353021,
+      376064,
+      379041,
+      322979,
+      363481,
+      354065
+    ],
+    "rows": [
+      "empty",
+      "byte_read",
+      "byte_write",
+      "word_read",
+      "word_write",
+      "read_256",
+      "write_256",
+      "fill_256"
+    ],
+    "ticks_per_second_at_3MHz": 46875,
+    "benchmark_sha256": "4443237eb735e476367608c3f4a01edac2d70f5aa38ce9869703f7ae27d546a6",
+    "limits": "One photographed run; ABI workload totals, not ROM1/EEPROM throughput"
+  },
+  "later_EA_reports": {
+    "record_loading": [
+      "TOMB loads through option 3",
+      "TOMBA loads in editor"
+    ],
+    "small_documents": "Saved, reloaded and verified by user",
+    "speed": "User reports faster TOMB loading and writing; TOMBA still slower",
+    "capacity_error_fix": "User says works much better; not exhaustive edge-case qualification"
+  },
+  "current_desktop_images_sha256": {
+    "ea-rom512k.bin": "fc3cedb20ecad7f72845dd5e29b5fd71e78d443a68d03a3bbf0e7dc2749d1afd",
+    "ea-atmega1284p-flash.bin": "41f22b0b036a954965160a0bcff763b7c16512883c8baae1106c05eb06f6382c",
+    "ea-atmega1284p-eeprom.bin": "72fbb027f2df35bf9026c9d9fc8bae2561f4162d7a099de45ff99cbc9609f40b"
+  },
+  "not_hardware_qualified": [
+    "Physical Supercart backend",
+    "Scratchpad editor preview",
+    "TI Writer",
+    "Multiplan",
+    "Return to Pirate's Isle"
+  ],
+  "interpretation": "Image/source correspondence records provenance; automated tests do not perform new hardware runs"
+}

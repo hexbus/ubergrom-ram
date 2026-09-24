@@ -19,6 +19,12 @@ def main():
     archive = args.archive.resolve()
     report = json.loads((build/'verification.json').read_text())
     manifest = json.loads((build/'manifest.json').read_text())
+    sources = manifest.get('source_sha256')
+    if not sources:
+        parser.error('Rebuild with source hashes before packaging')
+    for name, digest in sources.items():
+        if hashlib.sha256((ROOT/name).read_bytes()).hexdigest() != digest:
+            parser.error('Source changed since the verified build: '+name)
     if report.get('passed') is not True:
         parser.error('Build has not passed verification')
     if manifest.get('benchmarks'):

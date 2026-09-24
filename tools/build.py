@@ -29,7 +29,13 @@ def main():
     if out.is_relative_to(ROOT) and out.parts[len(ROOT.parts)] not in ('build', 'output'):
         parser.error('Inside the repository use build/ or output/')
     out.mkdir(parents=True)
-    manifest = {'abi': 1, 'hardware_tested': False, 'backends': {}}
+    manifest = {'abi': 1, 'hardware_tested': False,
+                'hardware_evidence': 'docs/hardware-results.md', 'backends': {}}
+    # Tie this build to the source used by the separate kit builder too.
+    manifest['source_sha256'] = {
+        p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+        for p in sorted([* (ROOT/'src').glob('*.asm'),
+                         * (ROOT/'examples').glob('*.asm'), Path(__file__).resolve()])}
     for backend in ('ubergrom', 'supercart'):
         dest = out / backend
         dest.mkdir()

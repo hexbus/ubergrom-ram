@@ -45,27 +45,6 @@ UGENT  STWP R5
        MOV  R11,@UGRWP+28
        MOV  R10,@UGRWP+30
        MOV  R4,@UGOP
-       .IFNDEF SUPERCART
-* Hardware qualification found bad GROM transfers with register workspaces
-* in expansion RAM, on both PicoPEB and Corcomp 32K. The identical routine
-* passed with WP=>8300. Borrow that workspace for the complete operation;
-* preserve its contents, including any overlapping caller registers.
-* Save arguments BEFORE the copy loop reuses the caller's volatile registers.
-       MOV  R0,@UGARGS
-       MOV  R1,@UGARGS+2
-       MOV  R2,@UGARGS+4
-       LI   R5,>8300
-       LI   R6,UGSAVE
-       LI   R7,16
-UGSAV  MOV  *R5+,*R6+
-       DEC  R7
-       JNE  UGSAV
-       LWPI >8300
-       MOV  @UGARGS,R0
-       MOV  @UGARGS+2,R1
-       MOV  @UGARGS+4,R2
-       MOV  @UGOP,R4
-       .ENDIF
        LI   R3,1
        CI   R0,>6000
        JL   UGFAIL
@@ -193,24 +172,7 @@ UGWRES CI   R4,2
        JNE  UGOK
        MOV  @UGBUF,R1
        JMP  UGOK
-UGEXIT .IFNDEF SUPERCART
-* Move out of scratchpad BEFORE restoring it, or the restore loop would
-* overwrite its own registers. Publish results after restoration so calls
-* from >8300 (or a partly overlapping workspace) also receive R1 and R3.
-       MOV  R1,@UGRESULT
-       MOV  R3,@UGRESULT+2
-       LWPI UGRWP
-       LI   R0,UGSAVE
-       LI   R1,>8300
-       LI   R2,16
-UGREST MOV  *R0+,*R1+
-       DEC  R2
-       JNE  UGREST
-       MOV  @UGRESULT,@2(R13)
-       MOV  @UGRESULT+2,@6(R13)
-       .ELSE
-       LWPI UGRWP
-       .ENDIF
+UGEXIT LWPI UGRWP
        RTWP
 
 * Writable private storage: 32-byte return workspace, opcode, scalar buffer.
@@ -218,11 +180,6 @@ UGREST MOV  *R0+,*R1+
 UGRWP  BSS  32
 UGOP   BSS  2
 UGBUF  BSS  2
-       .IFNDEF SUPERCART
-UGSAVE BSS  32
-UGARGS BSS  6
-UGRESULT BSS 4
-       .ENDIF
 UGSIGN TEXT '2026 Hexbus'
        EVEN
 UGEND  EQU  $

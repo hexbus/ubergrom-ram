@@ -21,8 +21,53 @@ function run(name,{badRam=false,existing=false}={}){
     const image=Buffer.from(original),gram=Buffer.alloc(15360,0x99),calls=[];
     const m=ramMachine(flash.subarray(0,0x1e000),rom,image,{configuredFlash:true,ubergromRam:gram});
     m.memory.settings.setRAM('32K');m.memory.reset(true);m.cpu.reset();m.cru.reset();
+    const sym=name==='RAMTEST'?build.ramtest_symbols:lm.benchmarks[name==='UGBENCH'?'ubergrom':'direct'].symbols;
+    let libraryPortAccesses=0;
+    let bridgeSnapshot=null,bridgeReturn=0,bridgeReturns=0;
+    const progress=[];
+    const scratch=()=>Buffer.from(Array.from({length:256},(_,i)=>{
+        const word=m.memory.getWord(0x8300+(i&~1));
+        return i&1?word&255:word>>>8;
+    }));
+    const execute=m.cpu.execute.bind(m.cpu);
+    m.cpu.execute=function(instruction){
+        const pc=(this.getPc()-2)&65535;
+        if(name==='RAMTEST'){
+            if(bridgeSnapshot&&pc===bridgeReturn){
+                assert.deepEqual(scratch(),bridgeSnapshot,'Test bridge restores all console scratchpad');
+                bridgeSnapshot=null;bridgeReturns++;
+            }
+            if(pc===sym.BRIDGE){
+                bridgeSnapshot=scratch();bridgeReturn=m.memory.getWord(0xbe1c);
+                const screen=m.screen();
+                assert.ok(screen.includes('FILE CALL:'),'Live file operation displayed before bridge entry');
+                assert.ok(screen.includes('STAGE:'),'Live stage displayed');
+                progress.push({stage:m.memory.getWord(sym.STAGE),screen});
+            }
+        }
+        return execute(instruction);
+    };
+    function checkBridgePort(port){
+        const pc=m.cpu.getPc();
+        if(name==='RAMTEST'&&pc>=sym.BRIDGE&&pc<0xbe00){
+            assert.ok(port!==0x9838&&port!==0x9c38,'Test bridge must not transfer private GROM RAM');
+            // Hardware-tested TEST 2 uses expansion registers for address-only
+            // transactions. Its scratchpad backup uses CPU RAM, never GROM data.
+        }
+    }
+    function checkLibraryWorkspace(){
+        const pc=m.cpu.getPc();
+        if(sym.UGGETB!==undefined&&pc>=sym.UGGETB&&pc<sym.UGEND){
+            assert.equal(m.cpu.getWp(),0x8300,'Library GROM I/O uses scratchpad registers');
+            libraryPortAccesses++;
+        }
+    }
+    const cartridgeWrite=m.cart.writeGROM.bind(m.cart);
+    m.cart.writeGROM=function(port,word){checkBridgePort(port);checkLibraryWorkspace();return cartridgeWrite(port,word);};
     // Same final-prefetched-byte dispatcher correction as dsr-coexistence.cjs.
     m.memory.readGROM=function(addr,cpu){
+        checkBridgePort(addr);
+        checkLibraryWorkspace();
         const counter=this.grom.getAddress(),data=(addr&2)===0;
         const address=data?((counter&0xe000)|((counter-1)&0x1fff)):counter;
         if(data&&address===0x10){
@@ -37,7 +82,6 @@ function run(name,{badRam=false,existing=false}={}){
         return(data?address>=0x6000:counter>=0x6001)?value:cv;
     };
     m.memory.buildMemoryMap();
-    const sym=name==='RAMTEST'?build.ramtest_symbols:lm.benchmarks[name==='UGBENCH'?'ubergrom':'direct'].symbols;
     m.frames(120);m.key('Space');m.frames(120);m.key('Digit2');m.frames(180);
     assert.ok(m.screen().includes('EDITOR/ASSEMBLER'),'E/A menu boot');
     m.key('Digit5');m.type('ROM1.'+name+'\n');
@@ -63,7 +107,13 @@ function run(name,{badRam=false,existing=false}={}){
             assert.ok(calls.some(c=>c.name==='ROM1.RAMDATA'&&c.op===5));
         }else assert.equal(m.getWrites(),0);
     }
-    results.push({name,badRam,existing,passed:true,eeprom_writes:m.getWrites(),calls,screen});
+    if(!existing&&name!=='CPUBENCH')assert.ok(libraryPortAccesses>0);
+    if(name==='RAMTEST'){
+        assert.ok(screen.includes('DSR TEST 2'),'Build the hardware-tested diagnostic');
+        assert.ok(bridgeReturns>0);assert.equal(bridgeSnapshot,null);
+        assert.ok(screen.includes('TEST FINISHED'));
+    }
+    results.push({name,badRam,existing,passed:true,libraryPortAccesses,bridgeReturns,progress,eeprom_writes:m.getWrites(),calls,screen});
     console.log('PASS',name,badRam?'bad RAM':existing?'existing-file guard':'normal');
 }
 run('RAMTEST');run('RAMTEST',{badRam:true});run('RAMTEST',{existing:true});

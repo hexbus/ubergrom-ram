@@ -9,6 +9,26 @@ const machine=backend=>makeMachine(backend,out,cases);
 
 for (const backend of ['ubergrom','supercart']) {
     const {call,ram,buffer} = machine(backend);
+    // Hardware regression: callers may keep registers in expansion RAM.
+    // Also cover partial overlap with the temporarily borrowed scratchpad.
+    for(const workspace of [0xbf00,0xa800,0x83e0,0x8300,0x8302,0x8310,0x82f0]){
+        const opts={workspace};
+        call('UGPUTW',0x6000,0xa55a,0,opts);
+        assert.equal(call('UGGETW',0x6000,0,0,opts),0xa55a);
+        call('UGPUTB',0x7fff,0x69,0,opts);
+        assert.equal(call('UGGETB',0x7fff,0,0,opts),0x69);
+        Buffer.from([0x12,0x34,0x56,0x78]).copy(ram,0xc000);
+        call('UGWRIT',0x66fe,0xc000,4,opts);
+        call('UGREAD',0x66fe,0xe000,4,opts);
+        assert.deepEqual(ram.subarray(0xe000,0xe004),ram.subarray(0xc000,0xc004));
+        call('UGFILL',0x6000,0x5a,8192,opts);
+        assert.ok(buffer().every(x=>x===0x5a));
+        call('UGREAD',0x6000,0xe000,8192,opts);
+        assert.ok(ram.subarray(0xe000).every(x=>x===0x5a));
+        call('UGREAD',0x8000,0,0,opts);
+        call('UGGETW',0x6001,0,0,{workspace,error:2});
+        call('UGREAD',0x6000,0x6000,1,{workspace,error:3});
+    }
     // Scalar edges, byte convention, endianness and return-state preservation.
     for (const address of [0x6000,0x66ff,0x6700,0x7fff]) {
         call('UGPUTB',address,0x12e5);
@@ -66,5 +86,5 @@ for (const backend of ['ubergrom','supercart']) {
 }
 const report = {passed:true,hardware_tested:false,cases:cases.length,details:cases};
 fs.writeFileSync(path.join(out,'verification.json'),JSON.stringify(report,null,2)+'\n');
-console.log('PASS: '+cases.length+' assembled CPU scenarios, both backends. Hardware not tested.');
+console.log('PASS: '+cases.length+' assembled CPU scenarios, both backends. This run uses modeled hardware.');
 process.exit(0);

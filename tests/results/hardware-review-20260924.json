@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-24",
+  "passed": true,
+  "hardware_tested": false,
+  "evidence": "Fresh assembled-code and console model tests, separate from hardware-20260924.json",
+  "abi_cases": 326,
+  "benchmark_builds": 4,
+  "timed_samples": 8192,
+  "build_guard_tests": 5,
+  "hardware_kit_cases": 5,
+  "dsr_operations": 59,
+  "library_calls": 111,
+  "source_components": {
+    "service.bin": {
+      "bytes": 8089,
+      "sha256": "aaa4f52937e38e6125f7e262020fea6789cc8c8c09c365f6858927abb0a18987"
+    },
+    "reader.bin": {
+      "bytes": 1725,
+      "sha256": "b0daac318bc05d670ffbbac35658f896b41e2fdb3f6055161dba20432282e94e"
+    }
+  },
+  "library_sha256": "f0005fd0ff8794b2f55866ec178f68fb7c59eb2318ba71fce6a6c26133769d45",
+  "exact_current_desktop_images": {
+    "ea-rom512k.bin": "fc3cedb20ecad7f72845dd5e29b5fd71e78d443a68d03a3bbf0e7dc2749d1afd",
+    "ea-atmega1284p-flash.bin": "41f22b0b036a954965160a0bcff763b7c16512883c8baae1106c05eb06f6382c",
+    "ea-atmega1284p-eeprom.bin": "72fbb027f2df35bf9026c9d9fc8bae2561f4162d7a099de45ff99cbc9609f40b"
+  },
+  "TEST2_matches_delivered_source_and_binary": true,
+  "preview": {
+    "passed": true,
+    "hardware_tested": false,
+    "results": [
+      {
+        "backend": "ubergrom",
+        "editing": true,
+        "insert_delete": true,
+        "undo": true,
+        "save": true,
+        "cold_reload": true,
+        "existing_file_guard": true,
+        "failed_load_preserves_document": true,
+        "too_many_records_rejected": true,
+        "page_crossing_line": true,
+        "last_line": true,
+        "failed_save_preserves_document": true,
+        "failed_replacement_preserves_old_file": true
+      },
+      {
+        "backend": "supercart",
+        "editing": true,
+        "undo": true,
+        "save_tested": false
+      }
+    ]
+  },
+  "build_directory": "output/hardware-review-20260924",
+  "kit_directory": "E:\\git\\adventure-ubergrom\\output\\builds\\ram-repo-review-kit-20260924",
+  "preview_directory": "E:\\git\\adventure-ubergrom\\output\\builds\\ram-repo-review-preview-20260924-v2",
+  "historical_probes": {
+    "1": {
+      "passed": true,
+      "cases": 3,
+      "hardware_tested": false,
+      "rom_sha256": "75a6b0befdc73057b99c22b734a1208385471178e4da65dbd3f8bd1203ab5732"
+    },
+    "2": {
+      "passed": true,
+      "cases": 4,
+      "hardware_tested": false,
+      "rom_sha256": "477e86ed365fd656f0fe01d61eb359b4ccc9b669231058918040693156bf8635"
+    }
+  },
+  "historical_probe_library_sha256": "4fd4a9b406387fa27f30a23ca0b96a64341a0b288f7ad7da073b4d9edf628b2f"
+}

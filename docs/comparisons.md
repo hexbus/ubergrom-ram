@@ -1,8 +1,7 @@
 # CPU RAM and UberGROM RAM: the same jobs
 
-Here are the changes a programmer actually makes. These examples compare
-ordinary CPU instructions with our ABI. The ABI column works with either
-backend; only the assembly-time selection changes.
+Here is what changes when you use the library in place of direct Supercart
+RAM access. The same calls work with either library version.
 
 All snippets assume the program and its workspace are in real CPU RAM,
 outside the buffer. `ERROR` is the application's error handler. See the
@@ -25,9 +24,8 @@ With the library:
        JNE  ERROR
 ```
 
-Both leave the word in R1. The library also validates the address and, on
-UberGROM, handles the GROM transaction. That extra work costs time. We do not
-expect a library call to match one native memory instruction.
+Both leave the word in R1. The library checks the address and handles the
+GROM ports, so it takes longer than a direct CPU read.
 
 ## Increase a score
 
@@ -51,10 +49,9 @@ With the library:
        JNE  ERROR
 ```
 
-For a score changed every frame, keep the live value in a CPU register or
-CPU RAM and store it in the buffer when needed. There is no automatic
-write-through cache. This example wraps at 65535 just like INC; overflow
-policy belongs to the game. The buffer itself is volatile, not a saved file.
+If a score changes every frame, keep it in CPU RAM and copy it to the buffer
+when needed. This example wraps at 65535, just like INC. Use a file save if
+you want to keep the score after power-off.
 
 ## Copy 256 bytes out
 
