@@ -1,0 +1,276 @@
+:root {
+  color-scheme: light;
+  --ink: #202122;
+  --muted: #54595d;
+  --line: #a2a9b1;
+  --light-line: #c8ccd1;
+  --panel: #f8f9fa;
+  --accent: #3366cc;
+  --heading: #111827;
+}
+
+@page {
+  size: Letter;
+  margin: 0.62in 0.62in 0.72in;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10pt;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: white;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 1.46;
+}
+
+main {
+  max-width: 100%;
+}
+
+.document-banner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 0.18in;
+  padding: 0 0 0.08in;
+  border-bottom: 1px solid var(--light-line);
+  color: var(--muted);
+  font-size: 7.6pt;
+}
+
+.document-source {
+  overflow-wrap: anywhere;
+}
+
+.document-generated {
+  white-space: nowrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  line-height: 1.18;
+  break-after: avoid-page;
+  page-break-after: avoid;
+  orphans: 3;
+  widows: 3;
+}
+
+h1 {
+  margin: 0 0 0.18in;
+  padding-bottom: 0.08in;
+  border-bottom: 1.5px solid var(--line);
+  font-size: 23pt;
+}
+
+h2 {
+  margin: 0.24in 0 0.09in;
+  padding-bottom: 0.035in;
+  border-bottom: 1px solid var(--light-line);
+  font-size: 16pt;
+}
+
+h3 {
+  margin: 0.19in 0 0.07in;
+  font-size: 12.5pt;
+}
+
+h4,
+h5,
+h6 {
+  margin: 0.16in 0 0.06in;
+  font-size: 10.5pt;
+}
+
+h1 + *,
+h2 + *,
+h3 + *,
+h4 + * {
+  break-before: avoid-page;
+  page-break-before: avoid;
+}
+
+p,
+li,
+dd {
+  orphans: 3;
+  widows: 3;
+}
+
+p {
+  margin: 0.07in 0 0.1in;
+}
+
+ul,
+ol {
+  margin: 0.06in 0 0.11in;
+  padding-left: 0.28in;
+}
+
+li {
+  margin: 0.025in 0;
+}
+
+li:has(input[type="checkbox"]) {
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a[href^="http"]::after {
+  content: "";
+}
+
+strong {
+  color: #101418;
+}
+
+code {
+  border-radius: 3px;
+  background: #eaecf0;
+  padding: 0.02in 0.04in;
+  font-family: Consolas, "Liberation Mono", monospace;
+  font-size: 8.7pt;
+}
+
+pre {
+  margin: 0.1in 0 0.14in;
+  border: 1px solid var(--light-line);
+  border-left: 3px solid #72777d;
+  border-radius: 3px;
+  background: var(--panel);
+  padding: 0.11in 0.13in;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.34;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+blockquote {
+  margin: 0.12in 0;
+  border-left: 3px solid var(--line);
+  background: var(--panel);
+  padding: 0.07in 0.13in;
+  color: #40454a;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+table {
+  width: 100%;
+  margin: 0.11in 0 0.17in;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 8.35pt;
+  line-height: 1.3;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tfoot {
+  display: table-footer-group;
+}
+
+tr,
+th,
+td {
+  break-inside: avoid-page !important;
+  page-break-inside: avoid !important;
+}
+
+th,
+td {
+  border: 1px solid var(--line);
+  padding: 0.055in 0.065in;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+th {
+  background: #eaecf0;
+  color: #202122;
+  font-weight: 650;
+  hyphens: none;
+  overflow-wrap: normal;
+  text-align: left;
+  word-break: keep-all;
+}
+
+tbody tr:nth-child(even) td {
+  background: #f8f9fa;
+}
+
+img,
+svg,
+figure {
+  max-width: 100%;
+  height: auto;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+img {
+  display: block;
+  margin: 0.12in auto;
+}
+
+hr {
+  margin: 0.2in 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+input[type="checkbox"] {
+  width: 0.13in;
+  height: 0.13in;
+  margin: 0 0.055in 0 0;
+  vertical-align: -0.018in;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  tr,
+  pre,
+  blockquote,
+  figure {
+    -webkit-region-break-inside: avoid;
+  }
+}

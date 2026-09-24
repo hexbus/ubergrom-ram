@@ -1,0 +1,14 @@
+{
+  "name": "ubergrom-ram",
+  "version": "0.1.0",
+  "private": true,
+  "description": "8K data-buffer ABI for UberGROM and Supercart on the TI-99/4A",
+  "license": "Apache-2.0",
+  "scripts": {"test": "node tests/verify.cjs build"},
+  "devDependencies": {
+    "rxjs": "7.8.2",
+    "ts-node": "10.9.2",
+    "typescript": "5.9.3"
+  },
+  "engines": {"node": ">=20"}
+}

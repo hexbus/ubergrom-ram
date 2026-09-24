@@ -1,0 +1,26 @@
+UberGROM RAM for the TI-99/4A
+Copyright 2026 hexbus.
+
+Project: https://github.com/hexbus/ubergrom-ram
+Website: https://www.hexbus.com
+
+Thanks to Mike Brent (Tursi) for UberGROM and its RAM interface documentation,
+and Fred for the original cartridge storage discussions.
+
+Original library code, examples, and tools are Apache License 2.0.
+Original documentation is Creative Commons Attribution 4.0 International.
+Retain the applicable attribution and license notices when redistributing.
+
+UberGROM firmware is by Mike Brent / Tursi. It is neither included nor
+modified by this project. Its separate terms remain in effect:
+https://github.com/tursilion/ubergrom
+https://www.harmlesslion.com
+
+xdt99 by Ralph Benzinger and js99er by Rasmus Moustgaard are external
+build/test tools. Their licenses apply to their own code. No TI ROMs,
+game files or third-party firmware are included in this distribution.
+
+Creator's request: please retain the embedded "2026 Hexbus" signature when
+using or adapting the library so its origin remains identifiable. This is
+an attribution-preservation request, not an additional restriction on the
+permissions granted by Apache License 2.0.
