@@ -14,8 +14,11 @@ Keep bases enabled and preserve the cartridge's existing mappings. On
 | >6000 | RAM | 0 |
 | >8000 | RAM | 1 |
 
-These are GROM addresses, not CPU RAM addresses. Keep rollover OFF for this
-profile. Do not change bases 0, 1, 14 or 15, the module header mirrors, the
+These are GROM addresses, not CPU RAM addresses. Preserve the existing
+rollover setting: the E/A/CF02 development DSR requires global configuration
+bytes `>05, >FA`, which have rollover **ON**. The library explicitly sets the
+address at its RAM page crossing; it does not need rollover turned off.
+Do not change bases 0, 1, 14 or 15, the module header mirrors, the
 firmware interface, or existing EEPROM/Flash mappings. Base 13 must be
 available for this use. If another device uses it, this fixed profile needs
 adapting before it can be used there.

@@ -82,8 +82,10 @@ console GROM is required for the saved-address read.
 
 Call only between complete GROM operations: there must not be a half-written
 address or half-read address in progress. The normal TI console 8K address
-wrapping is assumed. The tested setup uses UberGROM rollover OFF. The routine
+wrapping is assumed for the console's saved-address read. The routine
 explicitly sets the next address when crossing its physical RAM page.
+Preserve the cartridge's rollover setting as described in the
+[mapping guide](mapping.md); the file-service profile requires it enabled.
 
 Calls are synchronous. Interrupts remain disabled for the whole transfer;
 use small chunks (for example 128 or 256 bytes) when your program needs regular

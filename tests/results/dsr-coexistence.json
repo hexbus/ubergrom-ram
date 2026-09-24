@@ -1,0 +1,1278 @@
+{
+  "passed": true,
+  "hardware_tested": false,
+  "evidence": "TMS9900 emulator executes the CPU library, console GPL and unchanged development DSR; ATmega RAM/EEPROM are modeled.",
+  "source_components": {
+    "service.bin": {
+      "bytes": 8026,
+      "sha256": "540c81caca85cbd50263c811bc45a288dd9a4420ec54443036f154b34f6aa1a1"
+    },
+    "reader.bin": {
+      "bytes": 1697,
+      "sha256": "f08f6a71213bd5282c3aff5c1c375502fe88d945e56173bb8ee214744fa7fa71"
+    }
+  },
+  "library_sha256": "eac2fc0dac8c64c850ad86861df73e85fca027bbb1873670d03a31ae6ea4cf51",
+  "dsr_operations": 59,
+  "library_calls": 111,
+  "highest_dsr_ram_write": 5973,
+  "highest_library_ram_write": 14591,
+  "eeprom_writes": 1004,
+  "page_edge_reads": 80,
+  "emulator_revision": "66c2e587eeec489ce2dcfa537f9c71e734810f87",
+  "hardware_model_sha256": "ed0fb590ba7b5f99590b702c9b75a074c615f0ebb94519b1876f0c2c933625e6",
+  "protected_configuration_unchanged": true,
+  "spare_bytes_unchanged": 768,
+  "sentinel_preserved": true,
+  "cases": [
+    {
+      "kind": "library",
+      "name": "UGWRIT",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.KEEP",
+      "op": 6,
+      "flags": 0,
+      "error": 0,
+      "frames": 161
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGWRIT",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.PATTERN",
+      "op": 5,
+      "flags": 0,
+      "error": 0,
+      "frames": 40
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 0,
+      "flags": 4,
+      "error": 0,
+      "frames": 8
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 0,
+      "flags": 18,
+      "error": 0,
+      "frames": 73
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 2,
+      "flags": 4,
+      "error": 0,
+      "frames": 8
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGWRIT",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 3,
+      "flags": 18,
+      "error": 0,
+      "frames": 10
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 2,
+      "flags": 4,
+      "error": 0,
+      "frames": 8
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGWRIT",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 3,
+      "flags": 18,
+      "error": 0,
+      "frames": 10
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 2,
+      "flags": 4,
+      "error": 0,
+      "frames": 8
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGWRIT",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 3,
+      "flags": 18,
+      "error": 0,
+      "frames": 10
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 2,
+      "flags": 4,
+      "error": 0,
+      "frames": 8
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGWRIT",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 3,
+      "flags": 18,
+      "error": 0,
+      "frames": 10
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 1,
+      "flags": 18,
+      "error": 0,
+      "frames": 642
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 1,
+      "flags": 4,
+      "error": 0,
+      "frames": 6
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 0,
+      "flags": 20,
+      "error": 0,
+      "frames": 126
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGPUTW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGGETW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 2,
+      "flags": 20,
+      "error": 0,
+      "frames": 9
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGPUTW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGGETW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 2,
+      "flags": 20,
+      "error": 0,
+      "frames": 9
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGPUTW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGGETW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 2,
+      "flags": 20,
+      "error": 0,
+      "frames": 9
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGPUTW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGGETW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 2,
+      "flags": 20,
+      "error": 0,
+      "frames": 9
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 2,
+      "flags": 20,
+      "error": 5,
+      "frames": 7
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 1,
+      "flags": 20,
+      "error": 0,
+      "frames": 7
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 26368,
+      "length": 256,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.PROGRAM",
+      "op": 6,
+      "flags": 0,
+      "error": 0,
+      "frames": 569
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.PROGRAM",
+      "op": 5,
+      "flags": 0,
+      "error": 0,
+      "frames": 155
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.",
+      "op": 11,
+      "flags": 0,
+      "error": 0,
+      "frames": 172
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.KEEP",
+      "op": 5,
+      "flags": 0,
+      "error": 0,
+      "frames": 146
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 7,
+      "flags": 0,
+      "error": 0,
+      "frames": 182
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.PROGRAM",
+      "op": 7,
+      "flags": 0,
+      "error": 0,
+      "frames": 145
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.",
+      "op": 11,
+      "flags": 0,
+      "error": 0,
+      "frames": 96
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.MISSING",
+      "op": 5,
+      "flags": 0,
+      "error": 7,
+      "frames": 4
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGPUTW",
+      "address": 32767,
+      "length": 0,
+      "error": 1
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGWRIT",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.PATTERN",
+      "op": 5,
+      "flags": 0,
+      "error": 0,
+      "frames": 38
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 0,
+      "flags": 4,
+      "error": 0,
+      "frames": 8
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 0,
+      "flags": 18,
+      "error": 0,
+      "frames": 73
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 2,
+      "flags": 4,
+      "error": 0,
+      "frames": 8
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGWRIT",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 3,
+      "flags": 18,
+      "error": 0,
+      "frames": 10
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 2,
+      "flags": 4,
+      "error": 0,
+      "frames": 8
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGWRIT",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 3,
+      "flags": 18,
+      "error": 0,
+      "frames": 10
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 2,
+      "flags": 4,
+      "error": 0,
+      "frames": 8
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGWRIT",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 3,
+      "flags": 18,
+      "error": 0,
+      "frames": 10
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 2,
+      "flags": 4,
+      "error": 0,
+      "frames": 8
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGWRIT",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 26352,
+      "length": 80,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 3,
+      "flags": 18,
+      "error": 0,
+      "frames": 10
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 1,
+      "flags": 18,
+      "error": 0,
+      "frames": 614
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.RECORDS",
+      "op": 1,
+      "flags": 4,
+      "error": 0,
+      "frames": 6
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 0,
+      "flags": 20,
+      "error": 0,
+      "frames": 126
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGPUTW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGGETW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 2,
+      "flags": 20,
+      "error": 0,
+      "frames": 9
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGPUTW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGGETW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 2,
+      "flags": 20,
+      "error": 0,
+      "frames": 9
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGPUTW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGGETW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 2,
+      "flags": 20,
+      "error": 0,
+      "frames": 9
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGPUTW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGGETW",
+      "address": 32766,
+      "length": 0,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 2,
+      "flags": 20,
+      "error": 0,
+      "frames": 9
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 2,
+      "flags": 20,
+      "error": 5,
+      "frames": 7
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 1,
+      "flags": 20,
+      "error": 0,
+      "frames": 7
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 26368,
+      "length": 256,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.PROGRAM",
+      "op": 6,
+      "flags": 0,
+      "error": 0,
+      "frames": 562
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.PROGRAM",
+      "op": 5,
+      "flags": 0,
+      "error": 0,
+      "frames": 155
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.",
+      "op": 11,
+      "flags": 0,
+      "error": 0,
+      "frames": 172
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.KEEP",
+      "op": 5,
+      "flags": 0,
+      "error": 0,
+      "frames": 146
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.TEMP",
+      "op": 7,
+      "flags": 0,
+      "error": 0,
+      "frames": 182
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.PROGRAM",
+      "op": 7,
+      "flags": 0,
+      "error": 0,
+      "frames": 145
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.",
+      "op": 11,
+      "flags": 0,
+      "error": 0,
+      "frames": 96
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "ROM1.MISSING",
+      "op": 5,
+      "flags": 0,
+      "error": 7,
+      "frames": 4
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "library",
+      "name": "UGPUTW",
+      "address": 32767,
+      "length": 0,
+      "error": 1
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.KEEP",
+      "op": 5,
+      "flags": 0,
+      "error": 0,
+      "frames": 75
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    },
+    {
+      "kind": "dsr",
+      "name": "UBE1.",
+      "op": 11,
+      "flags": 0,
+      "error": 0,
+      "frames": 96
+    },
+    {
+      "kind": "library",
+      "name": "UGREAD",
+      "address": 24576,
+      "length": 8192,
+      "error": 0
+    }
+  ]
+}

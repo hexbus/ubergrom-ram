@@ -8,8 +8,10 @@ This is for new programs and source ports. It does not make an unchanged
 Supercart program run on UberGROM. Instructions, register workspaces and
 ordinary CPU pointers still need real CPU memory.
 
-**Version 0.2.0 is a development release.** Both backends and the included
-example pass assembled TMS9900 tests. Hardware testing is still needed.
+**Version 0.2.1 is a development release.** Both backends and the included
+example pass assembled TMS9900 tests. The UberGROM library also passes a
+[coexistence test with the development cartridge DSR](docs/verification.md#cartridge-dsr-coexistence).
+Hardware testing is still needed.
 
 ## What you get
 

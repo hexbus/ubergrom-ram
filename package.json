@@ -1,6 +1,6 @@
 {
   "name": "ubergrom-ram",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "description": "8K data-buffer ABI for UberGROM and Supercart on the TI-99/4A",
   "license": "Apache-2.0",
