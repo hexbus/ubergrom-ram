@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "hardware_tested": false,
+  "tested_images": {
+    "ea/ea-atmega1284p-flash.bin": "3ae0f28160da454ac312a844df8aa6da56282c73696858296c6b77301db46f39",
+    "ea/ea-rom512k.bin": "5efcebe383d9ab535c3f53f1737cdf3fbc07e194af7d208827ecc90b728e60d3",
+    "ea/ea-atmega1284p-eeprom.bin": "72fbb027f2df35bf9026c9d9fc8bae2561f4162d7a099de45ff99cbc9609f40b"
+  },
+  "evidence": "Actual E/A option 5 launches with CPU/console GPL and modeled ATmega hardware. Timer values are not hardware measurements.",
+  "results": [
+    {
+      "name": "RAMTEST",
+      "badRam": false,
+      "existing": false,
+      "passed": true,
+      "eeprom_writes": 317,
+      "calls": [
+        {
+          "op": 5,
+          "name": "ROM1.RAMTEST"
+        },
+        {
+          "op": 5,
+          "name": "UBE1.UGRAMT1"
+        },
+        {
+          "op": 5,
+          "name": "ROM1.RAMDATA"
+        },
+        {
+          "op": 6,
+          "name": "UBE1.UGRAMT1"
+        },
+        {
+          "op": 5,
+          "name": "UBE1.UGRAMT1"
+        },
+        {
+          "op": 5,
+          "name": "UBE1.UGRAMT1"
+        },
+        {
+          "op": 7,
+          "name": "UBE1.UGRAMT1"
+        },
+        {
+          "op": 5,
+          "name": "UBE1.UGRAMT1"
+        }
+      ],
+      "screen": "                                        \nUBERGROM RAM AND DSR TEST               \n                                        \n                                        \nRAM AND FILE CHECK: PASS                \n                                        \nSTAGE: 9                                \n                                        \nPHOTOGRAPH SCREEN. RESET TO LEAVE.      \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        "
+    },
+    {
+      "name": "RAMTEST",
+      "badRam": true,
+      "existing": false,
+      "passed": true,
+      "eeprom_writes": 0,
+      "calls": [
+        {
+          "op": 5,
+          "name": "ROM1.RAMTEST"
+        },
+        {
+          "op": 5,
+          "name": "UBE1.UGRAMT1"
+        }
+      ],
+      "screen": "                                        \nUBERGROM RAM AND DSR TEST               \n                                        \n                                        \nRAM OR FILE CHECK: FAILED               \n                                        \nSTAGE: 2                                \n                                        \nPHOTOGRAPH SCREEN. RESET TO LEAVE.      \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        "
+    },
+    {
+      "name": "RAMTEST",
+      "badRam": false,
+      "existing": true,
+      "passed": true,
+      "eeprom_writes": 0,
+      "calls": [
+        {
+          "op": 5,
+          "name": "ROM1.RAMTEST"
+        },
+        {
+          "op": 5,
+          "name": "UBE1.UGRAMT1"
+        }
+      ],
+      "screen": "                                        \nUBERGROM RAM AND DSR TEST               \n                                        \n                                        \nSTOP: CHECK UBE1.UGRAMT1 FIRST          \n                                        \nSTAGE: 1                                \n                                        \nPHOTOGRAPH SCREEN. RESET TO LEAVE.      \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        \n                                        "
+    },
+    {
+      "name": "UGBENCH",
+      "badRam": false,
+      "existing": false,
+      "passed": true,
+      "eeprom_writes": 0,
+      "calls": [
+        {
+          "op": 5,
+          "name": "ROM1.UGBENCH"
+        }
+      ],
+      "screen": "                                        \nUBERGROM RAM SPEED TEST                 \n                                        \nUBERGROM ABI                            \n                                        \nOPERATION                TOTAL TICKS    \n                                        \nEMPTY SAMPLE                    782     \nBYTE READ   4096 OPS         134504     \nBYTE WRITE  4096 OPS         137632     \nWORD READ   4096 OPS         157964     \nWORD WRITE  4096 OPS         161874     \nREAD 256    65536 BYTES      240804     \nWRITE 256   65536 BYTES      294693     \nFILL 256    65536 BYTES      281416     \n                                        \n                                        \n                                        \nDATA CHECK: PASS                        \n                                        \n                                        \n46875 TICKS = 1 SECOND AT 3MHZ          \nRESET CONSOLE TO LEAVE                  \n                                        "
+    },
+    {
+      "name": "CPUBENCH",
+      "badRam": false,
+      "existing": false,
+      "passed": true,
+      "eeprom_writes": 0,
+      "calls": [
+        {
+          "op": 5,
+          "name": "ROM1.CPUBENCH"
+        }
+      ],
+      "screen": "                                        \nUBERGROM RAM SPEED TEST                 \n                                        \nDIRECT 32K CPU RAM                      \n                                        \nOPERATION                TOTAL TICKS    \n                                        \nEMPTY SAMPLE                    782     \nBYTE READ   4096 OPS           7038     \nBYTE WRITE  4096 OPS           7820     \nWORD READ   4096 OPS           7820     \nWORD WRITE  4096 OPS           7038     \nREAD 256    65536 BYTES       98532     \nWRITE 256   65536 BYTES       94622     \nFILL 256    65536 BYTES       83674     \n                                        \n                                        \n                                        \nDATA CHECK: PASS                        \n                                        \n                                        \n46875 TICKS = 1 SECOND AT 3MHZ          \nRESET CONSOLE TO LEAVE                  \n                                        "
+    }
+  ]
+}

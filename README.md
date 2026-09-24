@@ -88,6 +88,11 @@ Set `JS99ER_CHECKOUT` to use an existing js99er checkout for the tests.
 
 See [verification and limits](docs/verification.md) for what the tests cover.
 
+For the local cartridge test package, read the
+[hardware test kit directions](docs/hardware-test-kit.md). Its E/A profile
+includes a visible RAM/file self-test and ROM1-loadable benchmarks. The
+cartridge images are separate from the public library ZIP.
+
 ## Credits and license
 
 Copyright 2026 **hexbus**. [GitHub](https://github.com/hexbus) ·
