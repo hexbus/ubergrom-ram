@@ -9,6 +9,46 @@ I wanted a simple way to use that RAM for scratch information, tables or a
 small document. Your program still runs in CPU memory. The buffer holds data,
 and its contents are lost when you turn the console off.
 
+## What can I use it for?
+
+- Keep a small document or source file while you edit it.
+- Store maps, item lists, dialogue or lookup tables for a game.
+- Hold temporary results or data you'll need again later.
+- Keep data in the cartridge instead of using more of the console's VDP RAM.
+
+Keep a working copy here to avoid loading the same data from disk or cassette
+over and over. UberGROM RAM holds that working copy; UBE1 or another storage
+device keeps the data after power-off. Save anything you want to keep.
+
+Read the part you need into CPU RAM, work on it there, then write it back.
+This works best for data you can move in chunks. Keep frequently updated
+variables and time-critical work in CPU RAM. It doesn't add space for CPU
+instructions or automatically give BASIC more memory.
+
+**The current library and examples need writable CPU RAM; our examples use
+the 32K expansion.** A bare-console cartridge could use the UberGROM RAM with
+software written for that setup, but this isn't a ready-made bare-console
+library. See the [memory requirements](docs/abi.md#cpu-buffers-and-ownership).
+
+## How fast is it?
+
+On my TI-99/4A with a Corcomp 32K sidecar, the library read about **9.5 KB/sec**
+and wrote about **8.5 KB/sec**, using 256-byte blocks. That's roughly **27 ms
+to read a block** or **30 ms to write one**, including the benchmark's call
+and loop overhead. Here, KB means 1,000 bytes.
+
+Individual byte calls managed about **550 reads or 544 writes per second**.
+Each call does the setup and restoration again, so use block calls when you
+can. These are speeds for the current RAM library, not ROM1 loads or EEPROM
+saves. The [hardware results](docs/hardware-results.md#recorded-speed-screen)
+have the measurements and the [benchmark guide](docs/benchmarks.md) explains
+how to run it yourself.
+
+The reason to use it is the extra room. We haven't measured VDP RAM alongside
+it on hardware yet, so there's no measured hardware speed ratio to claim.
+We haven't benchmarked it against mass-storage devices either; the benefit
+is avoiding repeated storage access, not a claim that it beats every device.
+
 ## How to use it
 
 Pass an address from `>6000` through `>7FFF` to the library. These are buffer
